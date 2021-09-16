@@ -23,6 +23,15 @@ class StatsServiceTest {
     }
 
     @Test
+    void shouldMaxSumMonth(){
+        StatsService service = new StatsService();
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18}; ////////////////////////////////////////
+        long expected = 8;
+        long actual = service.maxSumMonth(sales);
+        assertEquals(expected, actual);
+    }
+
+    @Test
     void shouldMinSumMonth() {
         StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
@@ -31,13 +40,7 @@ class StatsServiceTest {
         assertEquals(expected, actual);
     }
 
-    @Test
-    void shouldMaxSumMonth(){    StatsService service = new StatsService();
-        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        long expected = 6;
-        long actual = service.maxSumMonth(sales);
-        assertEquals(expected, actual);
-    }
+
 
     @Test
     void shouldMonthMaxAverage() {
